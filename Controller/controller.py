@@ -1,7 +1,7 @@
 from flask import Blueprint, jsonify
 from Repository.repository import User
 
-user_bp = Blueprint(__name__, "users")
+user_bp = Blueprint("users", __name__)
 repo = User()
 
 @user_bp.route("/users", methods=["GET"])
